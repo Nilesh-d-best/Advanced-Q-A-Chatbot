@@ -1,5 +1,4 @@
 import streamlit as st
-from langchain_groq import ChatGroq
 from langchain_community.llms import Ollama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
@@ -55,4 +54,5 @@ if user_input:
     response=generate_response(user_input,llm,temperature,max_tokens)
     st.write(response)
 else:
+
     st.write('Please provide your question')
